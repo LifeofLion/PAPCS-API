@@ -8,8 +8,8 @@ export default class extends BaseSchema {
       table.increments('id')
       table
         .integer('tokenable_id')
-        .notNullable()
         .unsigned()
+        .notNullable()
         .references('id')
         .inTable('users')
         .onDelete('CASCADE')
